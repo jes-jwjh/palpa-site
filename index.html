@@ -2,6 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SnapBet">
+<link rel="apple-touch-icon" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--green:#00ff88;--red:#ff3b3b;--gold:#ffd700;--dark:#0a0a0f;}
@@ -468,7 +472,7 @@ const clips = {
   8: { pause:2.2, win:"https://pub-13045c567080431dba79b9a1008bfc75.r2.dev/clip8-win.mp4", lose:"https://pub-13045c567080431dba79b9a1008bfc75.r2.dev/clip8-lose.mp4" }
 };
 const clipIds = [1,2,3,4,5,6,7,8];
-const MAX_BET = 300;
+const MAX_BET = 50;
 
 let coins=300, bet=5, streak=0, isChoosing=false;
 let recentResults=[], cashoutTimers={}, activeId=null;
