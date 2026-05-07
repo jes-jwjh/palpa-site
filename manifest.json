@@ -1,8 +1,0 @@
-{
-  "name": "Palpa",
-  "short_name": "Palpa",
-  "background_color": "#0a0a0f",
-  "theme_color": "#0a0a0f",
-  "display": "standalone",
-  "start_url": "/"
-}
