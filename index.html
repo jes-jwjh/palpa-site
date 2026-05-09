@@ -534,7 +534,7 @@ let referCount=0;
 const MAX_REFERS=3;
 function referFriend(){
   if(referCount>=MAX_REFERS){ showToast("Max referrals reached 🙏"); return; }
-  const msg="I've been playing this and it's 🔥 Check it out: YOUR_APP_URL";
+  const msg="I've been playing this and it's 🔥 Check it out: https://palpa.app";
   if(navigator.share){
     navigator.share({title:"SnapBet",text:msg});
   } else {
