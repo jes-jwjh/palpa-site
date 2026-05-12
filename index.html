@@ -728,8 +728,10 @@ function choose(id,userChoice){
     stopTension(id);
     const winProb=getWinProbability();
     const userWins=Math.random()<winProb;
-const correct=userWins;
-vB.src=clips[id][userWins?"win":"lose"]; vB.load();
+const videoOutcome=userWins?"win":"lose";
+const correct=(userChoice==="win"&&userWins)||(userChoice==="lose"&&!userWins);
+vB.src=clips[id][videoOutcome]; vB.load();
+
 
     vB.oncanplay=()=>{
       vB.oncanplay=null;
