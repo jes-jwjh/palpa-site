@@ -727,9 +727,9 @@ function choose(id,userChoice){
   const t2=setTimeout(()=>{
     stopTension(id);
     const winProb=getWinProbability();
-    const outcome=Math.random()<winProb?"win":"lose";
-    const correct=userChoice===outcome;
-    vB.src=clips[id][outcome]; vB.load();
+    const userWins=Math.random()<winProb;
+const correct=userWins;
+vB.src=clips[id][userWins?"win":"lose"]; vB.load();
 
     vB.oncanplay=()=>{
       vB.oncanplay=null;
