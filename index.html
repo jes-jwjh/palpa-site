@@ -727,10 +727,12 @@ function choose(id,userChoice){
   const t2=setTimeout(()=>{
     stopTension(id);
     const winProb=getWinProbability();
-    const userWins = Math.random()<winProb;
-const correct = userWins
-vB.src=clips[id][userWins ? "win" : "lose"]; vB.load();
-
+   const userWins = Math.random() < winProb;
+const correct = userWins;
+// If they win, play the video that matches their choice
+// If they lose, play the video that doesn't match their choice
+const videoToPlay = userWins ? userChoice : (userChoice === "win" ? "lose" : "win");
+vB.src = clips[id][videoToPlay]; vB.load();
 
     vB.oncanplay=()=>{
       vB.oncanplay=null;
